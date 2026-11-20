@@ -37,7 +37,7 @@ Note: Compatibility differs, and the required elf fire hose file differs from ve
 5. Check again to see if you made any typos or wrong byte edits
 6. Save as a new file
 7. `python edl.py w swraw (new image name).img` to write the config (This is also the last chance to undo anything you messed up; if you made a mistake, redo it immediately)
-8. python edl.py reset
+8. `python edl.py reset` and it will reboot immediately
 9. If you have done it correctly, you will see a transparent red bar at the top of the screen with the version number and SW number upon booting into the OS (If not: You're screwed)
 10. Now you are ready to use ADB
 11. **DO NOT CONNECT TO THE INTERNET**
@@ -68,9 +68,11 @@ Note: Compatibility differs, and the required elf fire hose file differs from ve
 ## Not lucky?
 Wait for a new version of fire hose
 
+If you typed `adb reboot fastboot` and it rudely said "Fastboot is disabled", well, you're out of luck and have to wait for the new version of fire hose again
+
 ## Screwed up and connected to the Internet?
-First of all, how dare you, I told you not to do it
+First of all, how dare you, I told you not to do it, you are an idiot and I hate you
 
-Second of all, if you see a red bar anyway, you're in luck, just fetch all package list and uninstall anything that has the word t o s s in it with `adb shell pm uninstall --user 0 (package name)` then install F-Droid to use apps
+Second of all, if you see a red bar at the top of the screen anyway, you're in luck. Just fetch the full package list and uninstall anything that has the word tee-oh-ess-ess in it with `adb shell pm uninstall --user 0 (package name)` then install F-Droid to use apps
 
-Note that you cannot use GApps on this version of Android
+Note that you cannot use GApps on this version of Android; this means no Google Play Store and Play Services, and no apps that rely on this feature will work at all (i.e., Spotify, YT Music, YouTube, etc.)
