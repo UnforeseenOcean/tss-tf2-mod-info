@@ -27,7 +27,7 @@ You will use tools made by B.Kerler available on GitHub
 
 Note: Compatibility differs, and the required elf fire hose file differs from version to version
 - If your version number ends with 9.13, you're screwed
-- If your version number ends with 9.5, you may be in luck, but you will need to look around a lot more
+- If your version number ends with 9.5 or 9.1, you may be in luck, but you will need to look around a lot more
 - If your version number is less than 7.1, then you're good to go; one of Xiaomi's tablets with the same CPU will have this elf file
 - You must source the loader yourself; it is not here and will not be linked here
 1. `python edl.py printgpt --loader=firehose.elf` to test if you are in luck or not (If you see the partition table being printed, you are in luck and can continue)
